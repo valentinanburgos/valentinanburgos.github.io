@@ -487,9 +487,9 @@
 .global-programs-section {
   box-sizing: border-box;
   width: 100%;
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 76px 48px 88px;
+  max-width: none;
+  margin: 0;
+  padding: 76px 0 88px;
 }
 
 .global-programs-section .education-heading {
