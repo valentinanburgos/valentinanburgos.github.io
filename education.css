@@ -520,10 +520,6 @@
   max-width: 850px;
   margin: 0 auto;
   padding: 24px;
-  border: 1px solid #e2e8f1;
-  border-radius: 26px;
-  background: #f7f9fd;
-  box-shadow: 0 16px 45px rgba(23, 38, 62, 0.06);
   box-sizing: border-box;
 }
 
