@@ -141,77 +141,163 @@
     </div>
   </section>
 
-<!-- GLOBAL PROGRAMS & INTERNATIONAL ENGAGEMENT -->
+
+<!-- GLOBAL PROGRAMS CAROUSEL -->
 <section class="edu-section global-programs-section" id="global-programs">
   <div class="edu-section-heading">
     <span class="edu-eyebrow">GLOBAL PERSPECTIVES</span>
     <h2>Learning beyond borders.</h2>
     <p>
-      Exploring new places, engaging with different perspectives, and
-      expanding my understanding of people and cultures through international
-      educational experiences.
+      Exploring new places, connecting with different cultures, and
+      expanding my perspective through international educational experiences.
     </p>
   </div>
 
-  <div class="global-programs-grid">
+  <div class="global-carousel" aria-label="International programs carousel">
+    <div class="global-carousel-top">
+      <span class="global-counter" id="global-counter">01 / 03</span>
+      <span class="global-carousel-label">MY GLOBAL JOURNEY</span>
+    </div>
 
-    <!-- Duplicate this card for each program -->
-    <article class="global-program-card">
-      <div class="global-program-image">
-        <img src="assets/images/global-program-1.jpg"
-             alt="Photo from international educational program"
-             loading="lazy">
-        <span class="global-program-country">COUNTRY</span>
-      </div>
-      <div class="global-program-content">
-        <span class="global-program-type">GLOBAL PROGRAM</span>
-        <h3>Program Name</h3>
-        <p>
-          Add a short description of the program, what you explored,
-          and how the experience broadened your academic or cultural perspective.
-        </p>
-        <span class="global-program-detail">International learning · Cultural engagement</span>
-      </div>
-    </article>
+    <div class="global-carousel-window">
+      <article class="global-slide active" aria-hidden="false">
+        <div class="global-slide-image">
+          <img src="assets/images/global-program-1.jpg"
+               alt="Photo from international program one">
+          <span class="global-program-country">COUNTRY ONE</span>
+        </div>
+        <div class="global-slide-content">
+          <span class="global-program-type">INTERNATIONAL EXPERIENCE · 01</span>
+          <h3>Program Name</h3>
+          <p>
+            Describe your first program, what you experienced, and how
+            it expanded your academic, cultural, or personal perspective.
+          </p>
+          <div class="global-slide-tags">
+            <span>Global learning</span>
+            <span>Cultural exchange</span>
+          </div>
+        </div>
+      </article>
 
-    <article class="global-program-card">
-      <div class="global-program-image">
-        <img src="assets/images/global-program-2.jpg"
-             alt="Photo from international educational program"
-             loading="lazy">
-        <span class="global-program-country">COUNTRY</span>
-      </div>
-      <div class="global-program-content">
-        <span class="global-program-type">GLOBAL PROGRAM</span>
-        <h3>Program Name</h3>
-        <p>
-          Describe the focus of this experience and a meaningful takeaway
-          from studying, learning, or engaging with the local community.
-        </p>
-        <span class="global-program-detail">Cross-cultural learning · Global awareness</span>
-      </div>
-    </article>
+      <article class="global-slide" aria-hidden="true" inert>
+        <div class="global-slide-image">
+          <img src="assets/images/global-program-2.jpg"
+               alt="Photo from international program two">
+          <span class="global-program-country">COUNTRY TWO</span>
+        </div>
+        <div class="global-slide-content">
+          <span class="global-program-type">INTERNATIONAL EXPERIENCE · 02</span>
+          <h3>Program Name</h3>
+          <p>
+            Describe your second program, its focus, and a meaningful
+            takeaway from engaging with a new environment or community.
+          </p>
+          <div class="global-slide-tags">
+            <span>Cross-cultural learning</span>
+            <span>New perspectives</span>
+          </div>
+        </div>
+      </article>
 
-    <article class="global-program-card">
-      <div class="global-program-image">
-        <img src="assets/images/global-program-3.jpg"
-             alt="Photo from international educational program"
-             loading="lazy">
-        <span class="global-program-country">COUNTRY</span>
-      </div>
-      <div class="global-program-content">
-        <span class="global-program-type">GLOBAL PROGRAM</span>
-        <h3>Program Name</h3>
-        <p>
-          Highlight the academic, professional, or personal insight you
-          gained through this international experience.
-        </p>
-        <span class="global-program-detail">Global perspective · Personal growth</span>
-      </div>
-    </article>
+      <article class="global-slide" aria-hidden="true" inert>
+        <div class="global-slide-image">
+          <img src="assets/images/global-program-3.jpg"
+               alt="Photo from international program three">
+          <span class="global-program-country">COUNTRY THREE</span>
+        </div>
+        <div class="global-slide-content">
+          <span class="global-program-type">INTERNATIONAL EXPERIENCE · 03</span>
+          <h3>Program Name</h3>
+          <p>
+            Describe your third program and how it contributed to your
+            interests, personal development, or understanding of the world.
+          </p>
+          <div class="global-slide-tags">
+            <span>International engagement</span>
+            <span>Personal growth</span>
+          </div>
+        </div>
+      </article>
+    </div>
 
+    <div class="global-carousel-controls">
+      <button class="global-arrow" id="global-prev"
+              type="button" aria-label="Previous program">
+        ←
+      </button>
+
+      <div class="global-dots" aria-label="Choose a program">
+        <button class="global-dot active" type="button"
+                data-slide="0" aria-label="Show program 1"
+                aria-current="true"></button>
+        <button class="global-dot" type="button"
+                data-slide="1" aria-label="Show program 2"></button>
+        <button class="global-dot" type="button"
+                data-slide="2" aria-label="Show program 3"></button>
+      </div>
+
+      <button class="global-arrow" id="global-next"
+              type="button" aria-label="Next program">
+        →
+      </button>
+    </div>
+
+    <p class="global-carousel-hint">Explore each experience <span>✳</span></p>
   </div>
 </section>
+
+<script>
+  (() => {
+    const carousel = document.querySelector(".global-carousel");
+    if (!carousel) return;
+
+    const slides = [...carousel.querySelectorAll(".global-slide")];
+    const dots = [...carousel.querySelectorAll(".global-dot")];
+    const counter = carousel.querySelector("#global-counter");
+    const previous = carousel.querySelector("#global-prev");
+    const next = carousel.querySelector("#global-next");
+    let current = 0;
+
+    function showSlide(index) {
+      current = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, i) => {
+        const active = i === current;
+        slide.classList.toggle("active", active);
+        slide.setAttribute("aria-hidden", String(!active));
+        slide.inert = !active;
+      });
+
+      dots.forEach((dot, i) => {
+        const active = i === current;
+        dot.classList.toggle("active", active);
+
+        if (active) {
+          dot.setAttribute("aria-current", "true");
+        } else {
+          dot.removeAttribute("aria-current");
+        }
+      });
+
+      counter.textContent =
+        String(current + 1).padStart(2, "0") +
+        " / " + String(slides.length).padStart(2, "0");
+    }
+
+    previous.addEventListener("click", () => showSlide(current - 1));
+    next.addEventListener("click", () => showSlide(current + 1));
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        showSlide(Number(dot.dataset.slide));
+      });
+    });
+
+    showSlide(0);
+  })();
+</script>
+
 
   <section class="education-global-section">
     <div class="education-container">
