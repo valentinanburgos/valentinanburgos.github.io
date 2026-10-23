@@ -789,3 +789,206 @@
     transition: none;
   }
 }
+
+/* ==========================================
+   LANGUAGE FLUENCY SECTION
+   ========================================== */
+
+.skills-languages {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 76px 0 88px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: 64px;
+}
+
+.skills-language-copy {
+  min-width: 0;
+}
+
+.skills-language-copy .skills-eyebrow {
+  display: block;
+  margin-bottom: 18px;
+  color: #6684c4;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.skills-language-copy h2 {
+  margin: 0 0 16px;
+  color: var(--edu-navy, #202b42);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+}
+
+.skills-language-copy p {
+  margin: 0;
+  color: var(--edu-muted, #718096);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.language-list {
+  width: 100%;
+  min-width: 0;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e5eaf1;
+}
+
+.language-item:first-child {
+  padding-top: 0;
+}
+
+.language-item:last-child {
+  border-bottom: none;
+}
+
+.language-item > div {
+  min-width: 0;
+}
+
+.language-item h3 {
+  margin: 0 0 6px;
+  color: var(--edu-navy, #26344d);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.language-item p {
+  margin: 0;
+  color: var(--edu-muted, #718096);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Five-dot fluency scale */
+.language-dot-group {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  gap: 7px;
+  min-width: max-content;
+}
+
+.language-dot-group i {
+  display: block !important;
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  border-radius: 50%;
+  background: #6684c4;
+  box-shadow: 0 0 0 3px rgba(102, 132, 196, 0.10);
+}
+
+.language-dot-group i.muted {
+  background: #dce3ed;
+  box-shadow: none;
+}
+
+.language-learning {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 7px 12px;
+  border: 1px solid #dce5f0;
+  border-radius: 999px;
+  background: #f1f5fa;
+  color: var(--edu-navy, #26344d);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   CENTER THE BOTTOM EDUCATION CTA
+   ========================================== */
+
+/* Supports either common CTA class name. */
+.education-cta,
+.education-closing,
+.education-outro {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 76px 24px 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.education-cta > *,
+.education-closing > *,
+.education-outro > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.education-cta h2,
+.education-closing h2,
+.education-outro h2 {
+  max-width: 700px;
+  text-align: center;
+}
+
+.education-cta p,
+.education-closing p,
+.education-outro p {
+  max-width: 540px;
+  text-align: center;
+}
+
+/* Responsive layout */
+@media (max-width: 760px) {
+  .skills-languages {
+    width: calc(100% - 40px);
+    padding: 56px 0 64px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .language-item {
+    gap: 14px;
+  }
+
+  .language-dot-group {
+    gap: 5px;
+  }
+
+  .language-dot-group i {
+    width: 8px;
+    height: 8px;
+    flex-basis: 8px;
+  }
+}
+
+@media (max-width: 420px) {
+  .language-item h3 {
+    font-size: 14px;
+  }
+
+  .language-item p {
+    font-size: 11px;
+  }
+}
