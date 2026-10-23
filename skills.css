@@ -557,3 +557,95 @@
     transition: none;
   }
 }
+
+/* Language fluency indicators */
+.language-dot-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.language-dot-group i {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--edu-blue, #5279a5);
+  box-shadow: 0 0 0 3px rgba(82, 121, 165, 0.10);
+}
+
+.language-dot-group i.muted {
+  background: #dce3ec;
+  box-shadow: none;
+}
+
+/* Language rows */
+.language-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--edu-border, #e5eaf0);
+}
+
+.language-item:last-child {
+  border-bottom: none;
+}
+
+.language-item h3 {
+  margin: 0 0 6px;
+  color: var(--edu-navy, #263d5b);
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.language-item p {
+  margin: 0;
+  color: var(--edu-muted, #718096);
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ASL learning label */
+.language-learning {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 12px;
+  border: 1px solid #dce5f0;
+  border-radius: 999px;
+  background: #f1f5fa;
+  color: var(--edu-navy, #263d5b);
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Mobile layout */
+@media (max-width: 560px) {
+  .language-item {
+    gap: 14px;
+  }
+
+  .language-dot-group {
+    gap: 5px;
+  }
+
+  .language-dot-group i {
+    width: 7px;
+    height: 7px;
+  }
+
+  .language-item h3 {
+    font-size: 15px;
+  }
+
+  .language-item p {
+    font-size: 12px;
+  }
+}
