@@ -492,9 +492,27 @@
   padding: 76px 48px 88px;
 }
 
-.global-programs-section .edu-section-heading {
+.global-programs-section .education-heading {
   max-width: 680px;
   margin: 0 auto 34px;
+}
+
+.global-programs-section .education-heading h2 {
+  margin: 0;
+  color: var(--edu-navy);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(29px, 4vw, 42px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -.045em;
+}
+
+.global-programs-section .education-intro {
+  max-width: 650px;
+  margin: 15px 0 0;
+  color: var(--edu-muted);
+  font-size: 13px;
+  line-height: 1.9;
 }
 
 .global-carousel {
