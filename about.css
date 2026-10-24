@@ -575,3 +575,25 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* VALUE CARD IMAGES */
+.about-value-card {
+  overflow: hidden;
+}
+
+.about-value-image {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+  margin-bottom: 22px;
+}
+
+/* Keep images balanced on smaller screens */
+@media (max-width: 600px) {
+  .about-value-image {
+    height: 190px;
+  }
+}
