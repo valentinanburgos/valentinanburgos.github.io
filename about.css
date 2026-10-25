@@ -609,3 +609,37 @@
   object-position: center;
   transform: scale(1.15);
 }
+
+/* SUBTLE SECTION COLOR PATTERN */
+.about-hero {
+  background: #ffffff;
+}
+
+.about-values-section {
+  background: #f1f5f9;
+  border-top: 1px solid #e5ebf3;
+  border-bottom: 1px solid #e5ebf3;
+}
+
+.about-closing {
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(93, 127, 181, 0.12),
+      transparent 70%
+    ),
+    #e8eff8;
+  border-top: 1px solid #dce5f0;
+}
+
+/* Keep the value cards crisp against the tinted background */
+.about-value-card {
+  background: #ffffff;
+  border-color: #e0e7ef;
+}
+
+@media (max-width: 650px) {
+  .about-closing {
+    padding: 59px 20px;
+  }
+}
