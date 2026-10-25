@@ -603,13 +603,6 @@
   }
 }
 
-/* Zoom in on the acting and martial arts photo */
-.about-value-card:nth-child(3) .about-value-image {
-  object-fit: cover;
-  object-position: center;
-  transform: scale(1.15);
-}
-
 /* SUBTLE SECTION COLOR PATTERN */
 .about-hero {
   background: #ffffff;
