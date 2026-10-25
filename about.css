@@ -437,8 +437,13 @@
   padding: 82px 24px;
   text-align: center;
   background:
-    radial-gradient(ellipse at 50% 0%, rgba(93, 127, 181, 0.14), transparent 65%),
-    white;
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(93, 127, 181, 0.12),
+      transparent 70%
+    ),
+    #e8eff8;
+  border-top: 1px solid #dce5f0;
 }
 
 .about-closing h2 {
