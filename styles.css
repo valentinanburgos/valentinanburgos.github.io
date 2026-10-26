@@ -634,3 +634,24 @@ h3 { font-size: 20px; line-height: 1.3; margin-bottom: 5px; }
     height: 34px;
   }
 }
+
+/* FIX: Remove gray side columns on the About page */
+html,
+body.about-page {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+body.about-page {
+  overflow-x: hidden;
+}
+
+body.about-page main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
