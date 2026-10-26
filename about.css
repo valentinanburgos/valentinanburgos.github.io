@@ -636,3 +636,13 @@
     padding: 59px 20px;
   }
 }
+
+.about-section-title {
+  max-width: 100%;
+}
+
+.about-section-description {
+  max-width: 900px;
+  font-size: 14px;
+  line-height: 1.9;
+}
