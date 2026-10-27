@@ -646,3 +646,28 @@
   font-size: 14px;
   line-height: 1.9;
 }
+
+.exp-scroll-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  color: var(--exp-navy);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.exp-scroll-link span {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--exp-line);
+  border-radius: 50%;
+  background: white;
+}
+
+.exp-scroll-link:hover span {
+  transform: translateY(3px);
+}
